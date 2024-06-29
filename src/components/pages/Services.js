@@ -13,13 +13,25 @@ export default function Services() {
     position: 'relative',
     borderRadius: '8px',
     margin: '10px',
-    padding: '20px',
+    padding: '10px', // Reduced padding
     textAlign: 'center',
-    width: 'calc(33% - 40px)', // Adjusting width for better alignment
+    width: 'calc(33.33% - 20px)', // Three columns on larger screens
     transition: 'transform 0.2s ease-in-out',
     boxSizing: 'border-box',
     overflow: 'hidden',
     backgroundColor: '#f9f9f9',
+    fontSize: '1em', // Default font size
+
+    // Media query for tablets (max-width: 1024px)
+    '@media (max-width: 1024px)': {
+      width: 'calc(50% - 20px)', // Two columns on tablets
+    },
+
+    // Media query for mobile phones (max-width: 768px)
+    '@media (max-width: 768px)': {
+      width: 'calc(100% - 20px)', // Single column on mobile phones
+      padding: '5px', // Reduced padding for smaller screens
+    },
   };
 
   const imgStyle = {
