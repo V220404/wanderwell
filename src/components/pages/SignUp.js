@@ -87,8 +87,8 @@ function App() {
   return (
     <div style={appStyle}>
       <video style={videoStyle} autoPlay loop muted>
-        <source src="/Users/varunsankhe/Desktop/wanderwell Project/public/videos/sign.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        <source src="/videos/sign.mp4" type="video/mp4" />
+
       </video>
       <header style={headerStyle}>
         <h1>Sign In</h1>
