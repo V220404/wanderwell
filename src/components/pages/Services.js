@@ -9,34 +9,24 @@ export default function Services() {
     padding: '20px',
   };
 
-  // const itemStyle = {
-  //   // border: '1px solid #ccc', 
-  //   borderRadius: '8px',
-  //   margin: '10px',
-  //   padding: '20px',
-  //   textAlign: 'center',
-  //   width: '28%',
-  //   transition: 'transform 0.2s ease-in-out',
-  //   boxSizing: 'border-box',
-  //   overflow: 'hidden', // Ensure the content stays within the borders
-  // };
   const itemStyle = {
-    position: 'relative', // Added to make the image position absolute work
+    position: 'relative',
     borderRadius: '8px',
     margin: '10px',
     padding: '20px',
     textAlign: 'center',
-    width: '28%',
+    width: 'calc(33% - 40px)', // Adjusting width for better alignment
     transition: 'transform 0.2s ease-in-out',
     boxSizing: 'border-box',
-    overflow: 'hidden', // Ensure the content stays within the borders
+    overflow: 'hidden',
+    backgroundColor: '#f9f9f9',
   };
 
   const imgStyle = {
     width: '100%',
     height: 'auto',
     borderRadius: '8px',
-    transition: 'opacity 0.5s ease-in-out', // Smooth transition for image change
+    transition: 'opacity 0.5s ease-in-out',
   };
 
   const hiddenImgStyle = {
@@ -45,11 +35,6 @@ export default function Services() {
     top: '0',
     left: '0',
     opacity: '0',
-  };
-
-  const hoverEffect = {
-    // transform: 'scale(1)',
-    
   };
 
   const services = [
@@ -74,7 +59,7 @@ export default function Services() {
     {
       title: 'Safari Expedition',
       description: 'Embark on a safari expedition to witness wildlife in their natural habitats.',
-      img: 'https://img.freepik.com/premium-photo/safari-expedition-heart-african-wilderness_611870-6124.jpg',
+      img: 'https://5.imimg.com/data5/DW/YE/GLADMIN-8883857/hill-and-jungle-expedition.png',
       hoverImg: 'https://safarifrank.com/wp-content/uploads/2018/11/guests-walking-okavango-delta-1920x1080.jpg',
     },
     {
@@ -88,7 +73,6 @@ export default function Services() {
       description: 'Immerse yourself in different cultures and traditions with our curated cultural tours.',
       img: 'https://qph.cf2.quoracdn.net/main-qimg-0c2d915b7ecf1651298ecad6b411a003-lq',
       hoverImg: 'https://haitiwonderland.com/assets/images/upload/blog/haiti_exploration-culturelle--a-la-decouverte-de-l-ame-haitienne_1700673818.webp',
-
     },
   ];
 
@@ -103,7 +87,7 @@ export default function Services() {
             onMouseEnter={(e) => {
               e.currentTarget.querySelector('.default-img').style.opacity = '0';
               e.currentTarget.querySelector('.hover-img').style.opacity = '1';
-              e.currentTarget.style.transform = hoverEffect.transform;
+              e.currentTarget.style.transform = 'scale(1.05)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.querySelector('.default-img').style.opacity = '1';
